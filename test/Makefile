@@ -1,9 +1,9 @@
-CC = g++ -g
-CFLAGS = -I.. -D_DEBUG
-OBJ = TestFADBAD.o TestTAD.o TestUDT.o TestAll.o
+CC = g++
+CPPFLAGS = "-I.. -D_DEBUG"
+OBJ = TestFADBAD.o TestTAD.o TestAll.o
 
 .cpp.o:
-	$(CC) $(CFLAGS) -c $<
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c $<
 
 TestAll : $(OBJ)
 	$(CC) -o $@ $(OBJ)

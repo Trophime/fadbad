@@ -1,0 +1,15 @@
+Source: fadbad++
+Section: libs
+Priority: extra
+Maintainer:  Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
+Uploaders: Christophe Trophime <christophe.trophime@lncmi.cnrs.fr>
+Build-Depends: cdbs, debhelper (>= 9)
+Standards-Version: 3.9.3
+Homepage: http://www.fadbad.com/fadbad.html
+
+Package: fadbad++
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: C++ Flexible Automatic differentiation
+ FADBAD++ implements the forward, backward and Taylor methods utilizing 
+ C++ templates and operator overloading.

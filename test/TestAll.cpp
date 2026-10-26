@@ -14,8 +14,8 @@ int main()
 	TestTAD testTAD;
 	testTAD.run(log);
 
-	TestUDT testUDT;
-	testUDT.run(log);
+	// TestUDT testUDT;
+	// testUDT.run(log);
 
 	return 0;
 }

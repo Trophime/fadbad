@@ -1,0 +1,19 @@
+#!/usr/bin/make -f
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/class/makefile.mk
+
+# Add here any variable or target overrides you need.
+
+# no check for this software
+DEB_MAKE_CHECK_TARGET := check
+
+# example when changing environnement variables is necessary :
+DEB_MAKE_ENVVARS    := CPPFLAGS_package="-I.."
+
+install/fadbad++::
+	make DESTDIR=$(CURDIR)/debian/fadbad++ install
+	perl  -pi -e "s|CPPFLAGS = -I\.\.|CPPFLAGS = -I/usr/include/fadbad++|"	\
+	   $(CURDIR)/debian/fadbad++/usr/include/fadbad++/examples/Makefile
+	perl  -pi -e "s|CPPFLAGS = -I\.\.|CPPFLAGS = -I/usr/include/fadbad++|"	\
+	   $(CURDIR)/debian/fadbad++/usr/include/fadbad++/test/Makefile

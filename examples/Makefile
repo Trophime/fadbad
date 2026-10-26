@@ -1,8 +1,8 @@
 CC = g++
-CFLAGS = -I..
+CPPFLAGS = -I..
 
 .cpp.o:
-	$(CC) $(CFLAGS) -c $<
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c $<
 
 all: ExampleBAD ExampleBADFAD1 ExampleBADFAD2 ExampleBADFAD3 ExampleBADFAD4 \
      ExampleFAD ExampleTAD1    ExampleTAD2    ExampleTAD3    MonteCarlo
